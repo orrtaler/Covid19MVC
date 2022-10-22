@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="covid19DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PersonalInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="1000" />
+          <Property Name="LastName" Type="varchar" MaxLength="1000" />
+          <Property Name="City" Type="varchar" MaxLength="1000" />
+          <Property Name="Street" Type="varchar" MaxLength="1000" />
+          <Property Name="NumberStreet" Type="int" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="Phone" Type="varchar" MaxLength="1000" />
+          <Property Name="Cellphone" Type="varchar" MaxLength="1000" />
+          <Property Name="VacDate1" Type="date" />
+          <Property Name="VacDate2" Type="date" />
+          <Property Name="VacDate3" Type="date" />
+          <Property Name="VacDate4" Type="date" />
+          <Property Name="VacMaker1" Type="varchar" MaxLength="1000" />
+          <Property Name="VacMaker2" Type="varchar" MaxLength="1000" />
+          <Property Name="VacMaker3" Type="varchar" MaxLength="1000" />
+          <Property Name="VacMaker4" Type="varchar" MaxLength="1000" />
+          <Property Name="SickDate" Type="date" />
+          <Property Name="RecoveryDate" Type="date" />
+        </EntityType>
+        <EntityContainer Name="covid19DBModelStoreContainer">
+          <EntitySet Name="PersonalInfo" EntityType="Self.PersonalInfo" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="covid19DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PersonalInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Street" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="NumberStreet" Type="Int32" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="Phone" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Cellphone" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="VacDate1" Type="DateTime" Precision="0" />
+          <Property Name="VacDate2" Type="DateTime" Precision="0" />
+          <Property Name="VacDate3" Type="DateTime" Precision="0" />
+          <Property Name="VacDate4" Type="DateTime" Precision="0" />
+          <Property Name="VacMaker1" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="VacMaker2" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="VacMaker3" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="VacMaker4" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="SickDate" Type="DateTime" Precision="0" />
+          <Property Name="RecoveryDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="covid19DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PersonalInfo" EntityType="Self.PersonalInfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="covid19DBModelStoreContainer" CdmEntityContainer="covid19DBEntities">
+          <EntitySetMapping Name="PersonalInfo">
+            <EntityTypeMapping TypeName="covid19DBModel.PersonalInfo">
+              <MappingFragment StoreEntitySet="PersonalInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="NumberStreet" ColumnName="NumberStreet" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Cellphone" ColumnName="Cellphone" />
+                <ScalarProperty Name="VacDate1" ColumnName="VacDate1" />
+                <ScalarProperty Name="VacDate2" ColumnName="VacDate2" />
+                <ScalarProperty Name="VacDate3" ColumnName="VacDate3" />
+                <ScalarProperty Name="VacDate4" ColumnName="VacDate4" />
+                <ScalarProperty Name="VacMaker1" ColumnName="VacMaker1" />
+                <ScalarProperty Name="VacMaker2" ColumnName="VacMaker2" />
+                <ScalarProperty Name="VacMaker3" ColumnName="VacMaker3" />
+                <ScalarProperty Name="VacMaker4" ColumnName="VacMaker4" />
+                <ScalarProperty Name="SickDate" ColumnName="SickDate" />
+                <ScalarProperty Name="RecoveryDate" ColumnName="RecoveryDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

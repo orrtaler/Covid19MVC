@@ -1,0 +1,196 @@
+﻿@model Covid19MVC.Models.PersonalInfo
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Personal Information</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            <label class="control-label col-md-2">First name</label>
+            @* @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Last name</label>
+            @*@Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">City</label>
+            @*@Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Street</label>
+            @*@Html.LabelFor(model => model.Street, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Street, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Street, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">House number</label>
+            @*@Html.LabelFor(model => model.NumberStreet, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NumberStreet, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NumberStreet, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Date of birth</label>
+            @*@Html.LabelFor(model => model.DateOfBirth, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DateOfBirth, "YYYY-MM-DD", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">House phone</label>
+            @*@Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Cellphone</label>
+            @*@Html.LabelFor(model => model.Cellphone, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Cellphone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Cellphone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">First vaccination date</label>
+            @*@Html.LabelFor(model => model.VacDate1, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VacDate1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.VacDate1, "YYYY-MM-DD", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">First vaccine manufacturer</label>
+            @*@Html.LabelFor(model => model.VacMaker1, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VacMaker1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.VacMaker1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Second vaccination date</label>
+            @*@Html.LabelFor(model => model.VacDate2, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VacDate2, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.VacDate2, "YYYY-MM-DD", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Second vaccine manufacturer</label>
+            @*@Html.LabelFor(model => model.VacMaker2, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VacMaker2, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.VacMaker2, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Third vaccination date</label>
+            @*@Html.LabelFor(model => model.VacDate3, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VacDate3, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.VacDate3, "YYYY-MM-DD", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Third vaccine manufacturer</label>
+            @* @Html.LabelFor(model => model.VacMaker3, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VacMaker3, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.VacMaker3, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Fourth vaccination date</label>
+            @* @Html.LabelFor(model => model.VacDate4, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VacDate4, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.VacDate4, "YYYY-MM-DD", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Fourth vaccine manufacturer</label>
+            @*@Html.LabelFor(model => model.VacMaker4, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VacMaker4, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.VacMaker4, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Sick date</label>
+            @*@Html.LabelFor(model => model.SickDate, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SickDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SickDate, "YYYY-MM-DD", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Recovery date</label>
+            @*@Html.LabelFor(model => model.RecoveryDate, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.RecoveryDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.RecoveryDate, "YYYY-MM-DD", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Return to the list of HMO members", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
