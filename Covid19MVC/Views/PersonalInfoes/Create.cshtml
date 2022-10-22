@@ -86,7 +86,7 @@
             @*  @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })*@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Phone, "יכול להכיל 9 ספרות", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.Phone, "Can contain 9 digits", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -95,7 +95,7 @@
             @*  @Html.LabelFor(model => model.Cellphone, htmlAttributes: new { @class = "control-label col-md-2" })*@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Cellphone, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Cellphone, "יכול להכיל 10 ספרות", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.Cellphone, "Can contain 10 digits", new { @class = "text-danger" })
             </div>
         </div>
 
