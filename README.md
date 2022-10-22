@@ -15,3 +15,7 @@ Hadasim2 project
 "Visual Studio"
 
 הנחות מקלות: את מספרי תעודת הזהות בדקתי תקינות רק מבחינת מספר הספרות (9) 
+
+
+הצגת פתרון לשאלת בונוס 2
+[_דיאגרמה ללא שם_.pdf](https://github.com/orrtaler/Covid19MVC/files/9845387/_._.pdf)
